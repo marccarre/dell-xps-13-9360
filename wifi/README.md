@@ -86,14 +86,14 @@ $ tree --charset ascii -D /lib/firmware/ath10k/QCA6174/
 $ cd /lib/firmware/ath10k/QCA6174/hw3.0/
 $ sudo curl -Lo board-2.bin "https://github.com/kvalo/ath10k-firmware/blob/master/QCA6174/hw3.0/board-2.bin?raw=true"
 $ sudo curl -Lo board.bin "https://github.com/kvalo/ath10k-firmware/blob/master/QCA6174/hw3.0/board.bin?raw=true"
-$ sudo curl -Lo firmware-6.bin "https://github.com/kvalo/ath10k-firmware/blob/master/QCA6174/hw3.0/4.4.1/firmware-6.bin_WLAN.RM.4.4.1-00102-QCARMSWP-1?raw=true"
+$ sudo curl -Lo firmware-5.bin "https://github.com/kvalo/ath10k-firmware/blob/master/QCA6174/hw3.0/4.4.1/firmware-6.bin_WLAN.RM.4.4.1-00102-QCARMSWP-1?raw=true"
 $ sudo curl -LO "https://raw.githubusercontent.com/kvalo/ath10k-firmware/master/QCA6174/hw3.0/4.4.1/notice.txt_WLAN.RM.4.4.1-00102-QCARMSWP-1"
 $ tree --charset ascii -D /lib/firmware/ath10k/QCA6174/
 /lib/firmware/ath10k/QCA6174/
 `-- [May 14 15:05]  hw3.0
     |-- [May 14 15:05]  board-2.bin
     |-- [May 14 15:05]  board.bin
-    |-- [May 14 15:05]  firmware-6.bin
+    |-- [May 14 15:05]  firmware-5.bin
     `-- [May 14 15:05]  notice.txt_WLAN.RM.4.4.1-00102-QCARMSWP-1
 
 1 directory, 4 files
