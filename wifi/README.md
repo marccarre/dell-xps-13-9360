@@ -5,7 +5,7 @@
 - WiFi disconnects.
 - Firmware crashes:
   ```console
-  $ dmesg -H
+  dmesg -H
   [...]
   [May14 10:27] ath10k_pci 0000:3a:00.0: firmware crashed! (uuid 5e323599-d1e8-44f2-a614-9c0df1ea5147)
   [  +0.000100] ath10k_pci 0000:3a:00.0: qca6174 hw3.2 (0x05030000, 0x00340aff sub 1a56:1535) fw WLAN.RM.2.0-00180-QCARMSWPZ-1 fwapi 4 bdapi 2 htt-ver 3.26 wmi-op 4 htt-op 3 cal otp max-sta 32 raw 0 hwcrypto 1 f
@@ -54,12 +54,12 @@ sudo lshw
 ```
 
 ```console
-$ sudo apt update
-$ sudo apt install --reinstall linux-firmware
+sudo apt update
+sudo apt install --reinstall linux-firmware
 ```
 
 ```console
-$ tree --charset ascii -D /lib/firmware/ath10k/QCA6174/
+tree --charset ascii -D /lib/firmware/ath10k/QCA6174/
 /lib/firmware/ath10k/QCA6174/
 |-- [May 11 14:54]  hw2.1
 |   |-- [Nov 17 16:40]  board-2.bin
@@ -83,12 +83,12 @@ $ tree --charset ascii -D /lib/firmware/ath10k/QCA6174/
 - Delete everything under `/lib/firmware/ath10k/QCA6174` and just keep `/lib/firmware/ath10k/QCA6174/hw3.0` as an empty directory.
 
 ```console
-$ cd /lib/firmware/ath10k/QCA6174/hw3.0/
-$ sudo curl -Lo board-2.bin "https://github.com/kvalo/ath10k-firmware/blob/master/QCA6174/hw3.0/board-2.bin?raw=true"
-$ sudo curl -Lo board.bin "https://github.com/kvalo/ath10k-firmware/blob/master/QCA6174/hw3.0/board.bin?raw=true"
-$ sudo curl -Lo firmware-5.bin "https://github.com/kvalo/ath10k-firmware/blob/master/QCA6174/hw3.0/4.4.1/firmware-6.bin_WLAN.RM.4.4.1-00102-QCARMSWP-1?raw=true"
-$ sudo curl -LO "https://raw.githubusercontent.com/kvalo/ath10k-firmware/master/QCA6174/hw3.0/4.4.1/notice.txt_WLAN.RM.4.4.1-00102-QCARMSWP-1"
-$ tree --charset ascii -D /lib/firmware/ath10k/QCA6174/
+cd /lib/firmware/ath10k/QCA6174/hw3.0/
+sudo curl -Lo board-2.bin "https://github.com/kvalo/ath10k-firmware/blob/master/QCA6174/hw3.0/board-2.bin?raw=true"
+sudo curl -Lo board.bin "https://github.com/kvalo/ath10k-firmware/blob/master/QCA6174/hw3.0/board.bin?raw=true"
+sudo curl -Lo firmware-5.bin "https://github.com/kvalo/ath10k-firmware/blob/master/QCA6174/hw3.0/4.4.1/firmware-6.bin_WLAN.RM.4.4.1-00102-QCARMSWP-1?raw=true"
+sudo curl -LO "https://raw.githubusercontent.com/kvalo/ath10k-firmware/master/QCA6174/hw3.0/4.4.1/notice.txt_WLAN.RM.4.4.1-00102-QCARMSWP-1"
+tree --charset ascii -D /lib/firmware/ath10k/QCA6174/
 /lib/firmware/ath10k/QCA6174/
 `-- [May 14 15:05]  hw3.0
     |-- [May 14 15:05]  board-2.bin
@@ -97,7 +97,7 @@ $ tree --charset ascii -D /lib/firmware/ath10k/QCA6174/
     `-- [May 14 15:05]  notice.txt_WLAN.RM.4.4.1-00102-QCARMSWP-1
 
 1 directory, 4 files
-$ sudo reboot
+sudo reboot
 ```
 
 ## Resources
