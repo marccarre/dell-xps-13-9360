@@ -2,6 +2,6 @@
 
 ## BIOS
 
-- `$ sudo cp bios/XPS_9360_2.6.2.exe /boot/efi/`
+- `sudo cp bios/XPS_9360_2.6.2.exe /boot/efi/`
 - reboot your computer to the BIOS menu by pressing "F12" when the Dell logo is displayed
 - select "BIOS Flash Update"
